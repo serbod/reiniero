@@ -1,0 +1,97 @@
+object Form1: TForm1
+  Left = 140
+  Height = 549
+  Top = 114
+  Width = 798
+  Caption = 'iptableslog'
+  ClientHeight = 549
+  ClientWidth = 798
+  OnCreate = FormCreate
+  LCLVersion = '1.0.8.0'
+  object LogGrid: TDBGrid
+    Left = 21
+    Height = 432
+    Top = 112
+    Width = 771
+    AutoEdit = False
+    Color = clWindow
+    Columns = <>
+    DataSource = LogTableSource
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+    TabOrder = 4
+  end
+  object LogFile: TFileNameEdit
+    Left = 104
+    Height = 23
+    Top = 26
+    Width = 240
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object LogLabel: TLabel
+    Left = 21
+    Height = 16
+    Top = 26
+    Width = 64
+    Caption = 'Firewall log:'
+    ParentColor = False
+  end
+  object ImportButton: TButton
+    Left = 202
+    Height = 42
+    Top = 62
+    Width = 94
+    Caption = '&Import'
+    OnClick = ImportButtonClick
+    TabOrder = 1
+  end
+  object OutputFile: TFileNameEdit
+    Left = 496
+    Height = 23
+    Top = 26
+    Width = 240
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object ExportButton: TButton
+    Left = 576
+    Height = 42
+    Top = 62
+    Width = 94
+    Caption = '&Export'
+    OnClick = ExportButtonClick
+    TabOrder = 3
+  end
+  object LogLabel1: TLabel
+    Left = 416
+    Height = 16
+    Top = 26
+    Width = 61
+    Caption = 'Output file:'
+    ParentColor = False
+  end
+  object SDFDataset: TSdfDataSet
+    FileMustExist = True
+    ReadOnly = True
+    FieldDefs = <>
+    AllowMultiLine = False
+    Delimiter = ','
+    FirstLineAsSchema = True
+    left = 472
+    top = 64
+  end
+  object LogTableSource: TDatasource
+    AutoEdit = False
+    DataSet = SDFDataset
+    left = 376
+    top = 64
+  end
+end

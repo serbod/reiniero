@@ -1,0 +1,38 @@
+; Certificate/key is needed in server mode and optional in client mode
+; The default certificate is provided only for testing and should not
+; be used in a production environment
+cert = stunnel.pem
+;key = stunnel.pem
+
+; Some performance tunings
+socket = l:TCP_NODELAY=1
+socket = r:TCP_NODELAY=1
+
+; Use it for client mode
+client = yes
+
+;only useful if we don't use vnc compression??
+;compression=zlib
+;output log
+output=stunnel.log
+; if we use a taskbar icon, end user may
+; fix problems himself once disconnected.
+taskbar=yes
+
+; Service-level configuration
+[vncserver]
+;client mode (remote service uses SSL):
+client = yes
+; port we're listening on:
+accept  = 127.0.0.1:65000
+; forward that to:
+connect = $(HELPERSERVERNAME):$(HELPERSERVERPORT)
+delay = yes
+sslVersion = TLSv1
+ciphers = AES256-SHA:AES128-SHA:IDEA-CBC-MD5
+;DES-CBC3-SHA is slow
+;don't use hosts.allow
+;won't work on windows
+;libwrap = no
+TIMEOUTconnect = 60
+TIMEOUTidle = 60

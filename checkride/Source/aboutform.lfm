@@ -1,0 +1,33 @@
+object InfoAboutForm: TInfoAboutForm
+  Left = 380
+  Height = 594
+  Top = 157
+  Width = 647
+  Caption = 'Info'
+  ClientHeight = 594
+  ClientWidth = 647
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  LCLVersion = '0.9.31'
+  object InfoMemo: TMemo
+    Left = 5
+    Height = 543
+    Top = 4
+    Width = 635
+    Lines.Strings = (
+      'Could not load file'
+    )
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+  object CloseButton: TButton
+    Left = 565
+    Height = 25
+    Top = 559
+    Width = 75
+    Caption = 'Close'
+    OnClick = CloseButtonClick
+    TabOrder = 1
+  end
+end

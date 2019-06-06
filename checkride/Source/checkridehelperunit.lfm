@@ -1,0 +1,143 @@
+object CheckRideHelperMain: TCheckRideHelperMain
+  Left = 341
+  Height = 593
+  Top = 155
+  Width = 758
+  Caption = 'CheckRideHelper'
+  ClientHeight = 573
+  ClientWidth = 758
+  Menu = MainMenu1
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.0.1.2'
+  object ServerPort: TLabeledEdit
+    Left = 107
+    Height = 23
+    Top = 8
+    Width = 104
+    EditLabel.AnchorSideTop.Control = ServerPort
+    EditLabel.AnchorSideTop.Side = asrCenter
+    EditLabel.AnchorSideRight.Control = ServerPort
+    EditLabel.AnchorSideBottom.Control = ServerPort
+    EditLabel.AnchorSideBottom.Side = asrBottom
+    EditLabel.Left = 9
+    EditLabel.Height = 16
+    EditLabel.Top = 11
+    EditLabel.Width = 95
+    EditLabel.Caption = 'Helper server port'
+    EditLabel.ParentColor = False
+    EditLabel.Layout = tlBottom
+    LabelPosition = lpLeft
+    TabOrder = 0
+    OnEditingDone = ServerPortEditingDone
+  end
+  object ConnectButton: TButton
+    Left = 304
+    Height = 25
+    Hint = 'Start listening to remote support connections from helped party'
+    Top = 51
+    Width = 75
+    Caption = 'Listen'
+    OnClick = ConnectButtonClick
+    TabOrder = 1
+  end
+  object DisconnectButton: TButton
+    Left = 392
+    Height = 25
+    Hint = 'Disconnect/stop listening'
+    Top = 51
+    Width = 75
+    Caption = 'Disconnect'
+    OnClick = DisconnectButtonClick
+    TabOrder = 2
+  end
+  object Memo1: TMemo
+    Left = 8
+    Height = 498
+    Top = 88
+    Width = 750
+    TabOrder = 3
+  end
+  object WhatIsMyIPButton: TButton
+    Left = 536
+    Height = 25
+    Hint = 'Opens website that shows your external IP address'
+    Top = 51
+    Width = 93
+    Caption = 'What is my IP?'
+    OnClick = WhatIsMyIPButtonClick
+    TabOrder = 4
+  end
+  object PortScanButton: TButton
+    Left = 656
+    Height = 25
+    Hint = 'Opens website that lets you portscan your external IP to check if your port is open.'
+    Top = 51
+    Width = 75
+    Caption = 'Port open?'
+    OnClick = PortScanButtonClick
+    TabOrder = 5
+  end
+  object TunnelProcess: TAsyncProcess
+    Active = False
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 272
+    top = 5
+  end
+  object VNCViewerProcess: TAsyncProcess
+    Active = False
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 384
+    top = 5
+  end
+  object MainMenu1: TMainMenu
+    left = 472
+    top = 8
+    object FileMenu: TMenuItem
+      Caption = '&File'
+      object QuitMenu: TMenuItem
+        Caption = '&Quit'
+        OnClick = QuitMenuClick
+      end
+    end
+    object ToolsMenu: TMenuItem
+      Caption = '&Tools'
+      object CustomizeMenu: TMenuItem
+        Caption = '&Customize Checkride executable'
+        OnClick = CustomizeMenuClick
+      end
+    end
+    object HelpMenu: TMenuItem
+      Caption = '&Help'
+      object MenuLicenses: TMenuItem
+        Caption = '&Licenses'
+        OnClick = MenuLicensesClick
+      end
+      object About: TMenuItem
+        Caption = '&About'
+        OnClick = AboutClick
+      end
+    end
+  end
+end

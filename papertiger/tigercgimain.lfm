@@ -1,0 +1,72 @@
+object FPWebobsolete: TFPWebobsolete
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Actions = <  
+    item
+      Name = 'unsupported'
+      Default = True
+      OnRequest = unsupportedRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'serverinfo'
+      Default = False
+      OnRequest = serverinfoRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'list'
+      Default = False
+      OnRequest = listRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'showimage'
+      Default = False
+      OnRequest = showimageRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'showdocument'
+      Default = False
+      OnRequest = showdocumentRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'adddocument'
+      Default = False
+      OnRequest = adddocumentRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'deletedocument'
+      Default = False
+      OnRequest = deletedocumentRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'scan'
+      Default = False
+      OnRequest = scanRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'uploadimage'
+      Default = False
+      OnRequest = uploadimageRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'processdocument'
+      Default = False
+      OnRequest = processdocumentRequest
+      Template.AllowTagParams = False
+    end>
+  DefActionWhenUnknown = False
+  CreateSession = False
+  Height = 108
+  HorizontalOffset = 517
+  VerticalOffset = 249
+  Width = 393
+end

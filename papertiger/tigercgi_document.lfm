@@ -1,0 +1,13 @@
+object FPWebdocument: TFPWebdocument
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Actions = <>
+  OnRequest = DataModuleRequest
+  DefActionWhenUnknown = False
+  CreateSession = False
+  Height = 150
+  HorizontalOffset = 300
+  VerticalOffset = 145
+  Width = 150
+end

@@ -1,0 +1,12 @@
+syntax: glob
+*.o
+*.ppu
+*.lps
+*.compiled
+*.or
+*.ini
+*.rsj
+demos/fpcplurktest
+demos/fpctwit
+demos/fpctwitgui
+demos/log.txt

@@ -1,0 +1,135 @@
+object CheckRideMain: TCheckRideMain
+  Left = 341
+  Height = 593
+  Top = 155
+  Width = 758
+  Caption = 'CheckRide'
+  ClientHeight = 573
+  ClientWidth = 758
+  Menu = MainMenu1
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '0.9.31'
+  object ServerName: TLabeledEdit
+    Left = 120
+    Height = 23
+    Top = 9
+    Width = 216
+    EditLabel.AnchorSideTop.Control = ServerName
+    EditLabel.AnchorSideTop.Side = asrCenter
+    EditLabel.AnchorSideRight.Control = ServerName
+    EditLabel.AnchorSideBottom.Control = ServerName
+    EditLabel.AnchorSideBottom.Side = asrBottom
+    EditLabel.Left = 14
+    EditLabel.Height = 16
+    EditLabel.Hint = 'Server name or IP address for the helper'
+    EditLabel.Top = 12
+    EditLabel.Width = 103
+    EditLabel.Caption = 'Helper server name'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    TabOrder = 0
+    OnEditingDone = ServerNameEditingDone
+  end
+  object ServerPort: TLabeledEdit
+    Left = 120
+    Height = 23
+    Top = 49
+    Width = 104
+    EditLabel.AnchorSideTop.Control = ServerPort
+    EditLabel.AnchorSideTop.Side = asrCenter
+    EditLabel.AnchorSideRight.Control = ServerPort
+    EditLabel.AnchorSideBottom.Control = ServerPort
+    EditLabel.AnchorSideBottom.Side = asrBottom
+    EditLabel.Left = 22
+    EditLabel.Height = 16
+    EditLabel.Top = 52
+    EditLabel.Width = 95
+    EditLabel.Caption = 'Helper server port'
+    EditLabel.ParentColor = False
+    EditLabel.Layout = tlBottom
+    LabelPosition = lpLeft
+    TabOrder = 1
+    OnEditingDone = ServerPortEditingDone
+  end
+  object ConnectButton: TButton
+    Left = 304
+    Height = 25
+    Top = 76
+    Width = 75
+    Caption = 'Connect'
+    OnClick = ConnectButtonClick
+    TabOrder = 2
+  end
+  object DisconnectButton: TButton
+    Left = 392
+    Height = 25
+    Top = 76
+    Width = 75
+    Caption = 'Disconnect'
+    OnClick = DisconnectButtonClick
+    TabOrder = 3
+  end
+  object Memo1: TMemo
+    Left = 8
+    Height = 474
+    Top = 112
+    Width = 750
+    TabOrder = 4
+  end
+  object TunnelProcess: TAsyncProcess
+    Active = False
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 696
+    top = 16
+  end
+  object VNCGUIProcess: TAsyncProcess
+    Active = False
+    Options = []
+    Priority = ppNormal
+    StartupOptions = []
+    ShowWindow = swoNone
+    WindowColumns = 0
+    WindowHeight = 0
+    WindowLeft = 0
+    WindowRows = 0
+    WindowTop = 0
+    WindowWidth = 0
+    FillAttribute = 0
+    left = 600
+    top = 16
+  end
+  object MainMenu1: TMainMenu
+    left = 512
+    top = 16
+    object FileMenu: TMenuItem
+      Caption = '&File'
+      object QuitMenu: TMenuItem
+        Caption = 'Quit'
+        OnClick = QuitMenuClick
+      end
+    end
+    object HelpMenu: TMenuItem
+      Caption = '&Help'
+      object MenuLicense: TMenuItem
+        Caption = '&Licenses'
+        OnClick = MenuLicenseClick
+      end
+      object AboutMenu: TMenuItem
+        Caption = '&About'
+        OnClick = AboutMenuClick
+      end
+    end
+  end
+end

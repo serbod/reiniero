@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>FPSpreadsheet - Lazarus wiki</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.1" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/index.php?title=FPSpreadsheet&amp;action=edit" />
+<link rel="edit" title="Edit" href="/index.php?title=FPSpreadsheet&amp;action=edit" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Lazarus wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://wiki.lazarus.freepascal.org/api.php?action=rsd" />
+<link rel="copyright" href="http://sourceforge.net" />
+<link rel="alternate" type="application/atom+xml" title="Lazarus wiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;*" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;*" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: lazaruswiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "FPSpreadsheet", "wgTitle": "FPSpreadsheet", "wgCurRevisionId": 66037, "wgArticleId": 4164, "wgIsArticle": true, "wgAction": "view", "wgUserName": "BigChimp", "wgUserGroups": ["*", "user", "autoconfirmed"], "wgCategories": ["Components"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-delphi {line-height: normal;}
+.source-delphi li, .source-delphi pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for delphi
+ * CSS class: source-delphi, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.delphi.source-delphi .de1, .delphi.source-delphi .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.delphi.source-delphi  {font-family:monospace;}
+.delphi.source-delphi .imp {font-weight: bold; color: red;}
+.delphi.source-delphi li, .delphi.source-delphi .li1 {font-weight: normal; vertical-align:top;}
+.delphi.source-delphi .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.delphi.source-delphi .li2 {font-weight: bold; vertical-align:top;}
+.delphi.source-delphi .kw1 {color: #000000; font-weight: bold;}
+.delphi.source-delphi .kw2 {color: #000000; font-weight: bold;}
+.delphi.source-delphi .kw3 {color: #000066;}
+.delphi.source-delphi .kw4 {color: #000066; font-weight: bold;}
+.delphi.source-delphi .co1 {color: #808080; font-style: italic;}
+.delphi.source-delphi .co2 {color: #008000; font-style: italic;}
+.delphi.source-delphi .coMULTI {color: #808080; font-style: italic;}
+.delphi.source-delphi .es0 {color: #ff0000; font-weight: bold;}
+.delphi.source-delphi .br0 {color: #000066;}
+.delphi.source-delphi .sy0 {color: #000066;}
+.delphi.source-delphi .sy1 {color: #000066;}
+.delphi.source-delphi .sy2 {color: #000066;}
+.delphi.source-delphi .sy3 {color: #000066;}
+.delphi.source-delphi .st0 {color: #ff0000;}
+.delphi.source-delphi .nu0 {color: #0000ff;}
+.delphi.source-delphi .me1 {color: #006600;}
+.delphi.source-delphi .re0 {color: #9ac;}
+.delphi.source-delphi .re1 {color: #ff0000;}
+.delphi.source-delphi .ln-xtra, .delphi.source-delphi li.ln-xtra, .delphi.source-delphi div.ln-xtra {background-color: #ffc;}
+.delphi.source-delphi span.xtra { display:block; }
+
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-FPSpreadsheet action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">FPSpreadsheet</h1>
+	<div id="bodyContent">
+		<div id="siteSub">From Lazarus wiki</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>
+		<!-- start content -->
+<div lang="en" dir="ltr" class="mw-content-ltr"><p><small>
+<a href="/FPSpreadsheet/de" title="FPSpreadsheet/de"><b>Deutsch (de)</b></a> |
+<strong class="selflink"><b>English (en)</b></strong> |
+<a href="/FPSpreadsheet/fr" title="FPSpreadsheet/fr"><b>Français (fr)</b></a> |
+<a href="/FPSpreadsheet/ru" title="FPSpreadsheet/ru"><b>Русский (ru)</b></a>
+</small>
+</p><p>The fpSpreadsheet library offers a convenient way to generate and read spreadsheet documents in various formats. The library is written in a very flexible manner, capable of being extended to support any number of formats easily.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#API_Documentation"><span class="tocnumber">1</span> <span class="toctext">API Documentation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#API_Reference"><span class="tocnumber">1.1</span> <span class="toctext">API Reference</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Formulas"><span class="tocnumber">1.2</span> <span class="toctext">Formulas</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#RPN_Formulas"><span class="tocnumber">1.3</span> <span class="toctext">RPN Formulas</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Using_simple_constant_numbers"><span class="tocnumber">1.3.1</span> <span class="toctext">Using simple constant numbers</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Using_ranges_of_cells_and_the_unary_SUM_operator"><span class="tocnumber">1.3.2</span> <span class="toctext">Using ranges of cells and the unary SUM operator</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Using_built-in_routines"><span class="tocnumber">1.3.3</span> <span class="toctext">Using built-in routines</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#Built-in_routines"><span class="tocnumber">1.4</span> <span class="toctext">Built-in routines</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Packages"><span class="tocnumber">1.5</span> <span class="toctext">Packages</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#laz_fpspreadsheet.lpk"><span class="tocnumber">1.5.1</span> <span class="toctext">laz_fpspreadsheet.lpk</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#laz_fpspreadsheet_visual.lpk"><span class="tocnumber">1.5.2</span> <span class="toctext">laz_fpspreadsheet_visual.lpk</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Examples"><span class="tocnumber">2</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Excel_5_example"><span class="tocnumber">2.1</span> <span class="toctext">Excel 5 example</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Opening_an_existing_spreadsheet"><span class="tocnumber">2.2</span> <span class="toctext">Opening an existing spreadsheet</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Writing_a_spreadsheet_to_file_based_on_extension"><span class="tocnumber">2.3</span> <span class="toctext">Writing a spreadsheet to file based on extension</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Iterating_through_all_Worksheets"><span class="tocnumber">2.4</span> <span class="toctext">Iterating through all Worksheets</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Converting_a_database_to_a_spreadsheet"><span class="tocnumber">2.5</span> <span class="toctext">Converting a database to a spreadsheet</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Converting_between_two_spreadsheet_formats"><span class="tocnumber">2.6</span> <span class="toctext">Converting between two spreadsheet formats</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Using_formatting_options"><span class="tocnumber">2.7</span> <span class="toctext">Using formatting options</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#Setting_the_text_orientation"><span class="tocnumber">2.7.1</span> <span class="toctext">Setting the text orientation</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Setting_a_Border"><span class="tocnumber">2.7.2</span> <span class="toctext">Setting a Border</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Setting_a_Background_Color"><span class="tocnumber">2.7.3</span> <span class="toctext">Setting a Background Color</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Combining_Multiple_Formattings"><span class="tocnumber">2.7.4</span> <span class="toctext">Combining Multiple Formattings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-24"><a href="#Grid_and_Charting_Controls_with_FPSpreadsheet"><span class="tocnumber">2.8</span> <span class="toctext">Grid and Charting Controls with FPSpreadsheet</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Download"><span class="tocnumber">3</span> <span class="toctext">Download</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Subversion"><span class="tocnumber">3.1</span> <span class="toctext">Subversion</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Latest_release"><span class="tocnumber">3.2</span> <span class="toctext">Latest release</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-28"><a href="#Support_and_Bug_Reporting"><span class="tocnumber">4</span> <span class="toctext">Support and Bug Reporting</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#Current_Progress"><span class="tocnumber">5</span> <span class="toctext">Current Progress</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="#Support_by_file_format"><span class="tocnumber">5.1</span> <span class="toctext">Support by file format</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Progress_of_the_formatting_options"><span class="tocnumber">5.2</span> <span class="toctext">Progress of the formatting options</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#Changelog"><span class="tocnumber">6</span> <span class="toctext">Changelog</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#License"><span class="tocnumber">7</span> <span class="toctext">License</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#External_Links"><span class="tocnumber">9</span> <span class="toctext">External Links</span></a></li>
+</ul>
+</td></tr></table>
+<h2><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=1" title="Edit section: API Documentation">edit</a>]</span> <span class="mw-headline" id="API_Documentation"> API Documentation </span></h2>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=2" title="Edit section: API Reference">edit</a>]</span> <span class="mw-headline" id="API_Reference"> API Reference </span></h3>
+<p>In CHM format here:
+</p><p><a rel="nofollow" class="external free" href="http://lazarus-ccr.svn.sourceforge.net/viewvc/lazarus-ccr/components/fpspreadsheet/fpspreadsheet.chm">http://lazarus-ccr.svn.sourceforge.net/viewvc/lazarus-ccr/components/fpspreadsheet/fpspreadsheet.chm</a>
+</p>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=3" title="Edit section: Formulas">edit</a>]</span> <span class="mw-headline" id="Formulas"> Formulas </span></h3>
+<p>Two kinds of formulas are supported by FPSpreadsheet: string formulas and RPN formulas. String formulas are written in strings just like in the office application, for example "=ROUND(A1+B1)", while RPN formulas are written in Reverse Polish Notation (RPN), for example: A1, B1, Add, 0, ROUND
+</p>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=4" title="Edit section: RPN Formulas">edit</a>]</span> <span class="mw-headline" id="RPN_Formulas"> RPN Formulas </span></h3>
+<h4><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=5" title="Edit section: Using simple constant numbers">edit</a>]</span> <span class="mw-headline" id="Using_simple_constant_numbers">Using simple constant numbers</span></h4>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1"><span class="kw1">var</span>
+  MyRPNFormula<span class="sy1">:</span> TsRPNFormula<span class="sy1">;</span>
+<span class="kw1">begin</span>
+  <span class="co1">// Write the formula =4+5</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">3</span><span class="sy1">,</span> <span class="nu0">0</span><span class="sy1">,</span> <span class="st0">'=4+5'</span><span class="br0">&#41;</span><span class="sy1">;</span> <span class="co1">// A4</span>
+  <span class="co1">//</span>
+  <span class="kw3">SetLength</span><span class="br0">&#40;</span>MyRPNFormula<span class="sy1">,</span> <span class="nu0">3</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekNum<span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">DoubleValue</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">4.0</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekNum<span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">DoubleValue</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">5.0</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekAdd<span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteRPNFormula</span><span class="br0">&#40;</span><span class="nu0">3</span><span class="sy1">,</span> <span class="nu0">2</span><span class="sy1">,</span> MyRPNFormula<span class="br0">&#41;</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">;</span></pre></div></pre>
+<h4><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=6" title="Edit section: Using ranges of cells and the unary SUM operator">edit</a>]</span> <span class="mw-headline" id="Using_ranges_of_cells_and_the_unary_SUM_operator">Using ranges of cells and the unary SUM operator</span></h4>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">  <span class="co1">// =Sum(E2:e5)</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="sy1">,</span> <span class="nu0">0</span><span class="sy1">,</span> <span class="st0">'=Sum(E2:e5)'</span><span class="br0">&#41;</span><span class="sy1">;</span> <span class="co1">// A2</span>
+  <span class="co1">//</span>
+  <span class="kw3">SetLength</span><span class="br0">&#40;</span>MyRPNFormula<span class="sy1">,</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekCellRange<span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Row</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">1</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Row2</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">4</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Col</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">4</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Col2</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">4</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekOpSUM<span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteRPNFormula</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="sy1">,</span> <span class="nu0">2</span><span class="sy1">,</span> MyRPNFormula<span class="br0">&#41;</span><span class="sy1">;</span>   <span class="co1">// C2</span></pre></div></pre>
+<h4><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=7" title="Edit section: Using built-in routines">edit</a>]</span> <span class="mw-headline" id="Using_built-in_routines">Using built-in routines</span></h4>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">  <span class="co1">// Write the formula E1 = ABS(A1)</span>
+  <span class="kw3">SetLength</span><span class="br0">&#40;</span>MyRPNFormula<span class="sy1">,</span> <span class="nu0">2</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekCell<span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Col</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Row</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekABS<span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteRPNFormula</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">4</span><span class="sy1">,</span> MyRPNFormula<span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Write the formula F1 = ROUND(A1, 0)</span>
+  <span class="kw3">SetLength</span><span class="br0">&#40;</span>MyRPNFormula<span class="sy1">,</span> <span class="nu0">3</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekCell<span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Col</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Row</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekNum<span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">DoubleValue</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0.0</span><span class="sy1">;</span>
+  MyRPNFormula<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span> <span class="sy1">:</span><span class="sy3">=</span> fekROUND<span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteRPNFormula</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">5</span><span class="sy1">,</span> MyRPNFormula<span class="br0">&#41;</span><span class="sy1">;</span></pre></div></pre>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=8" title="Edit section: Built-in routines">edit</a>]</span> <span class="mw-headline" id="Built-in_routines"> Built-in routines </span></h3>
+<p><b>ABS</b> - Returns the absolute value of a given number. Takes 1 argument. Example: ABS(-1) = 1
+</p><p><b>ROUND</b> - Rounds a number to a given number of decimal places. Takes 2 arguments, first the number to be rounded and then the number of decimal places to be rounded to. This second argument is zero by default and may be negative.
+</p>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=9" title="Edit section: Packages">edit</a>]</span> <span class="mw-headline" id="Packages"> Packages </span></h3>
+<p>FPSpreadsheet comes with the following packages to facilitate its usage with:
+</p>
+<h4><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=10" title="Edit section: laz fpspreadsheet.lpk">edit</a>]</span> <span class="mw-headline" id="laz_fpspreadsheet.lpk">laz_fpspreadsheet.lpk</span></h4>
+<p>Adds all necessary files to use fpspreadsheet in your Lazarus projects. After adding this package as a requirement to your project you can add "fpspreadsheet" to the uses clause of the units which use it.
+</p>
+<h4><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=11" title="Edit section: laz fpspreadsheet visual.lpk">edit</a>]</span> <span class="mw-headline" id="laz_fpspreadsheet_visual.lpk">laz_fpspreadsheet_visual.lpk</span></h4>
+<p>Adds a set of visual components which expands the capabilities of FPSpreadsheet to also include editing and displaying data on screen inside LCL applications.
+</p><p>The following LCL components are installed with this package:
+</p>
+<ul><li> <a href="/index.php?title=TsWorksheetGrid&amp;action=edit&amp;redlink=1" class="new" title="TsWorksheetGrid (page does not exist)">TsWorksheetGrid</a>
+</li><li> <a href="/TsWorksheetChartSource" title="TsWorksheetChartSource">TsWorksheetChartSource</a>
+</li></ul>
+<h2><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=12" title="Edit section: Examples">edit</a>]</span> <span class="mw-headline" id="Examples"> Examples </span></h2>
+<p>To create a project which uses the fpspreadsheet library, add the fpspreadsheet_pkg package to it's Lazarus project, or add the base directory of fpspreadsheet to you compiler options if using another IDE.
+</p>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=13" title="Edit section: Excel 5 example">edit</a>]</span> <span class="mw-headline" id="Excel_5_example"> Excel 5 example </span></h3>
+<p>Note: at least with fpspreadsheet from trunk (development version), this example requires (at least) Lazarus <i>avglvltree.pas, lazutf8.pas, asiancodepagefunctions.inc, asiancodepages.inc</i> and <i>lconvencoding.pas</i> (in the $(LazarusDir)\components\lazutils\ directory)
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1"><span class="coMULTI">{
+excel5demo.dpr
+&#160;
+Demonstrates how to write an Excel 5.x file using the fpspreadsheet library
+&#160;
+You can change the output format by changing the OUTPUT_FORMAT constant
+&#160;
+AUTHORS: Felipe Monteiro de Carvalho
+}</span>
+<span class="kw1">program</span> excel5demo<span class="sy1">;</span>
+&#160;
+<span class="co2">{$mode delphi}{$H+}</span>
+&#160;
+<span class="kw1">uses</span>
+  Classes<span class="sy1">,</span> SysUtils<span class="sy1">,</span> fpspreadsheet<span class="sy1">,</span> fpsallformats<span class="sy1">,</span> fpspreadsheet_pkg<span class="sy1">;</span>
+&#160;
+<span class="kw1">const</span> OUTPUT_FORMAT <span class="sy3">=</span> sfExcel5<span class="sy1">;</span>
+&#160;
+<span class="kw1">var</span>
+  MyWorkbook<span class="sy1">:</span> TsWorkbook<span class="sy1">;</span>
+  MyWorksheet<span class="sy1">:</span> TsWorksheet<span class="sy1">;</span>
+  MyFormula<span class="sy1">:</span> TsRPNFormula<span class="sy1">;</span>
+  MyDir<span class="sy1">:</span> <span class="kw4">string</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+  <span class="co1">// Initialization</span>
+  MyDir <span class="sy1">:</span><span class="sy3">=</span> <span class="kw3">ExtractFilePath</span><span class="br0">&#40;</span><span class="kw3">ParamStr</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Create the spreadsheet</span>
+  MyWorkbook <span class="sy1">:</span><span class="sy3">=</span> TsWorkbook<span class="sy1">.</span><span class="me1">Create</span><span class="sy1">;</span>
+  MyWorksheet <span class="sy1">:</span><span class="sy3">=</span> MyWorkbook<span class="sy1">.</span><span class="me1">AddWorksheet</span><span class="br0">&#40;</span><span class="st0">'My Worksheet'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Write some number cells</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteNumber</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">1.0</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteNumber</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">1</span><span class="sy1">,</span> <span class="nu0">2.0</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteNumber</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">2</span><span class="sy1">,</span> <span class="nu0">3.0</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteNumber</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">3</span><span class="sy1">,</span> <span class="nu0">4.0</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Write the formula E1 = A1 + B1</span>
+  <span class="co1">// or, in RPN: A1, B1, +</span>
+  <span class="kw3">SetLength</span><span class="br0">&#40;</span>MyFormula<span class="sy1">,</span> <span class="nu0">3</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span><span class="sy1">:</span><span class="sy3">=</span>fekCell<span class="sy1">;</span> <span class="coMULTI">{A1}</span>
+  MyFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Col</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span><span class="sy1">;</span>
+  MyFormula<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Row</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span><span class="sy1">;</span>
+  MyFormula<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span><span class="sy1">:</span><span class="sy3">=</span>fekCell<span class="sy1">;</span> <span class="coMULTI">{B1}</span>
+  MyFormula<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Col</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">1</span><span class="sy1">;</span>
+  MyFormula<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">Row</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span><span class="sy1">;</span>
+  MyFormula<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">ElementKind</span><span class="sy1">:</span><span class="sy3">=</span>fekAdd<span class="sy1">;;</span>  <span class="coMULTI">{+}</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteRPNFormula</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">4</span><span class="sy1">,</span> MyFormula<span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Creates a new worksheet</span>
+  MyWorksheet <span class="sy1">:</span><span class="sy3">=</span> MyWorkbook<span class="sy1">.</span><span class="me1">AddWorksheet</span><span class="br0">&#40;</span><span class="st0">'My Worksheet 2'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Write some string cells</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">0</span><span class="sy1">,</span> <span class="st0">'First'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">1</span><span class="sy1">,</span> <span class="st0">'Second'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">2</span><span class="sy1">,</span> <span class="st0">'Third'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">3</span><span class="sy1">,</span> <span class="st0">'Fourth'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Save the spreadsheet to a file</span>
+  MyWorkbook<span class="sy1">.</span><span class="me1">WriteToFile</span><span class="br0">&#40;</span>MyDir <span class="sy3">+</span> <span class="st0">'test'</span> <span class="sy3">+</span> STR_EXCEL_EXTENSION<span class="sy1">,</span> OUTPUT_FORMAT<span class="br0">&#41;</span><span class="sy1">;</span>
+  MyWorkbook<span class="sy1">.</span><span class="me1">Free</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">.</span></pre></div></pre>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=14" title="Edit section: Opening an existing spreadsheet">edit</a>]</span> <span class="mw-headline" id="Opening_an_existing_spreadsheet"> Opening an existing spreadsheet </span></h3>
+<p>To open a spreadsheet while specifying a particular format to use use ReadFromFile with two parameters:
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">MyWorkbook<span class="sy1">.</span><span class="me1">ReadFromFile</span><span class="br0">&#40;</span>AFileName<span class="sy1">,</span> sfExcel5<span class="br0">&#41;</span><span class="sy1">;</span></pre></div></pre>
+<p>If ReadFromFile is called with only one parameter then it will use the extension to auto-detect the file format. In case of ambiguous formats like Excel 2-8 it will simply try various possibilities until one works. In the future it might make a more efficient check for the Excel format.
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">MyWorkbook<span class="sy1">.</span><span class="me1">ReadFromFile</span><span class="br0">&#40;</span>AFileName<span class="br0">&#41;</span><span class="sy1">;</span></pre></div></pre>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=15" title="Edit section: Writing a spreadsheet to file based on extension">edit</a>]</span> <span class="mw-headline" id="Writing_a_spreadsheet_to_file_based_on_extension"> Writing a spreadsheet to file based on extension </span></h3>
+<p>Similar to the ReadFromFile routine, I've implemented a WriteToFile procedure (also with suggestions and enhancements from Felipe Monteiro de Carvalho) to determine the spreadsheet's type based on the filename suffix. It uses the getFormatFromFileName routine in the previous section's code, so the actual code is simple. However, it will always write files with a given extension using the latest format that uses that extension (e.g. Excel .xls files will be written as sfExcel8), so if you want to write them in an earlier format, you have to use the base routine.
+</p><p>As above, this code patches the fpspreadsheet.pas unit.
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1"><span class="kw1">procedure</span> TsWorkbook<span class="sy1">.</span><span class="me1">WriteToFile</span><span class="br0">&#40;</span><span class="kw1">const</span> AFileName<span class="sy1">:</span> <span class="kw4">string</span><span class="sy1">;</span> <span class="kw1">const</span> AOverwriteExisting<span class="sy1">:</span> <span class="kw4">Boolean</span> <span class="sy3">=</span> <span class="kw2">False</span><span class="br0">&#41;</span><span class="sy1">;</span> <span class="kw1">overload</span><span class="sy1">;</span>
+<span class="kw1">var</span> SheetType<span class="sy1">:</span> TsSpreadsheetFormat<span class="sy1">;</span>
+<span class="kw1">begin</span>
+    <span class="kw1">if</span> getFormatFromFileName<span class="br0">&#40;</span>AFileName<span class="sy1">,</span> SheetType<span class="br0">&#41;</span> <span class="kw1">then</span>
+       WriteToFile<span class="br0">&#40;</span>AFileName<span class="sy1">,</span> SheetType<span class="sy1">,</span> AOverwriteExisting<span class="br0">&#41;</span>
+    <span class="kw1">else</span> <span class="kw1">raise</span> Exception<span class="sy1">.</span><span class="me1">Create</span><span class="br0">&#40;</span><span class="kw3">Format</span><span class="br0">&#40;</span>
+       <span class="st0">'[TsWorkbook.WriteToFile] Attempted to save a spreadsheet by extension, but the extension&#160;%s is invalid.'</span><span class="sy1">,</span> <span class="br0">&#91;</span><span class="kw3">ExtractFileExt</span><span class="br0">&#40;</span>AFileName<span class="br0">&#41;</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">;</span></pre></div></pre>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=16" title="Edit section: Iterating through all Worksheets">edit</a>]</span> <span class="mw-headline" id="Iterating_through_all_Worksheets"> Iterating through all Worksheets </span></h3>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1"><span class="kw1">var</span>
+  MyWorkbook<span class="sy1">:</span> TsWorkbook<span class="sy1">;</span>
+  MyWorksheet<span class="sy1">:</span> TsWorksheet<span class="sy1">;</span>
+  i<span class="sy1">:</span> <span class="kw4">Integer</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+  <span class="co1">// Here load MyWorkbook from a file or build it</span>
+&#160;
+  <span class="kw1">for</span> i <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span> <span class="kw1">to</span> MyWorkbook<span class="sy1">.</span><span class="me1">GetWorksheetCount</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy3">-</span> <span class="nu0">1</span> <span class="kw1">do</span>
+  <span class="kw1">begin</span>
+    MyWorksheet <span class="sy1">:</span><span class="sy3">=</span> MyWorkbook<span class="sy1">.</span><span class="me1">GetWorksheetByIndex</span><span class="br0">&#40;</span>i<span class="br0">&#41;</span><span class="sy1">;</span>
+    <span class="co1">// Do something with MyWorksheet</span>
+  <span class="kw1">end</span><span class="sy1">;</span></pre></div></pre>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=17" title="Edit section: Converting a database to a spreadsheet">edit</a>]</span> <span class="mw-headline" id="Converting_a_database_to_a_spreadsheet">Converting a database to a spreadsheet</span></h3>
+<p>Use something like:
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1"><span class="kw1">program</span> db5xls<span class="sy1">;</span>
+&#160;
+<span class="co2">{$mode delphi}{$H+}</span>
+&#160;
+<span class="kw1">uses</span>
+  Classes<span class="sy1">,</span> SysUtils<span class="sy1">,</span> 
+  <span class="co1">// add database units</span>
+  fpspreadsheet<span class="sy1">,</span> fpsallformats<span class="sy1">;</span>
+&#160;
+<span class="kw1">const</span> OUTPUT_FORMAT <span class="sy3">=</span> sfExcel5<span class="sy1">;</span>
+&#160;
+<span class="kw1">var</span>
+  MyWorkbook<span class="sy1">:</span> TsWorkbook<span class="sy1">;</span>
+  MyWorksheet<span class="sy1">:</span> TsWorksheet<span class="sy1">;</span>
+  MyDatabase<span class="sy1">:</span> TSdfDataset<span class="sy1">;</span>
+  MyDir<span class="sy1">:</span> <span class="kw4">string</span><span class="sy1">;</span>
+  i<span class="sy1">,</span> j<span class="sy1">:</span> <span class="kw4">Integer</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+  <span class="co1">// Initialization</span>
+  MyDir <span class="sy1">:</span><span class="sy3">=</span> <span class="kw3">ExtractFilePath</span><span class="br0">&#40;</span><span class="kw3">ParamStr</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Open the database</span>
+  MyDatabase <span class="sy1">:</span><span class="sy3">=</span> TSdfDataset<span class="sy1">.</span><span class="me1">Create</span><span class="sy1">;</span>
+  MyDatabase<span class="sy1">.</span><span class="me1">Filename</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="st0">'test.dat'</span><span class="sy1">;</span>
+  <span class="co1">// Add table description here</span>
+  MyDatabase<span class="sy1">.</span><span class="me1">Active</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="kw2">True</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Create the spreadsheet</span>
+  MyWorkbook <span class="sy1">:</span><span class="sy3">=</span> TsWorkbook<span class="sy1">.</span><span class="me1">Create</span><span class="sy1">;</span>
+  MyWorksheet <span class="sy1">:</span><span class="sy3">=</span> MyWorkbook<span class="sy1">.</span><span class="me1">AddWorksheet</span><span class="br0">&#40;</span><span class="st0">'My Worksheet'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Write the field names</span>
+  <span class="kw1">for</span> i <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span> <span class="kw1">to</span> MyDatabase<span class="sy1">.</span><span class="me1">Fields</span><span class="sy1">.</span><span class="me1">Count</span> <span class="sy3">-</span> <span class="nu0">1</span> <span class="kw1">do</span>
+    MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> i<span class="sy1">,</span> MyDatabase<span class="sy1">.</span><span class="me1">Fields</span><span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">FieldName</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Write all cells to the worksheet</span>
+  MyDatabase<span class="sy1">.</span><span class="me1">First</span><span class="sy1">;</span>
+  j <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span><span class="sy1">;</span>
+  <span class="kw1">while</span> <span class="kw1">not</span> MyDatabase<span class="sy1">.</span><span class="kw3">EOF</span> <span class="kw1">do</span>
+  <span class="kw1">begin</span>
+    <span class="kw1">for</span> i <span class="sy1">:</span><span class="sy3">=</span> <span class="nu0">0</span> <span class="kw1">to</span> MyDatabase<span class="sy1">.</span><span class="me1">Fields</span><span class="sy1">.</span><span class="me1">Count</span> <span class="sy3">-</span> <span class="nu0">1</span> <span class="kw1">do</span>
+      MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span>j <span class="sy3">+</span> <span class="nu0">1</span><span class="sy1">,</span> i<span class="sy1">,</span> MyDatabase<span class="sy1">.</span><span class="me1">Fields</span><span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="sy1">.</span><span class="me1">AsString</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+    MyDatabase<span class="sy1">.</span><span class="me1">Next</span><span class="sy1">;</span>
+    <span class="kw3">Inc</span><span class="br0">&#40;</span>j<span class="br0">&#41;</span><span class="sy1">;</span>
+  <span class="kw1">end</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Close the database</span>
+  MyDatabase<span class="sy1">.</span><span class="me1">Active</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="kw2">False</span><span class="sy1">;</span>
+  MyDatabase<span class="sy1">.</span><span class="me1">Free</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Save the spreadsheet to a file</span>
+  MyWorkbook<span class="sy1">.</span><span class="me1">WriteToFile</span><span class="br0">&#40;</span>MyDir <span class="sy3">+</span> <span class="st0">'test'</span> <span class="sy3">+</span> STR_EXCEL_EXTENSION<span class="sy1">,</span> OUTPUT_FORMAT<span class="br0">&#41;</span><span class="sy1">;</span>
+  MyWorkbook<span class="sy1">.</span><span class="me1">Free</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">.</span></pre></div></pre>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=18" title="Edit section: Converting between two spreadsheet formats">edit</a>]</span> <span class="mw-headline" id="Converting_between_two_spreadsheet_formats">Converting between two spreadsheet formats</span></h3>
+<p>Note that this is only meta-code, not tested.
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1"><span class="kw1">program</span> ods2xls<span class="sy1">;</span>
+&#160;
+<span class="co2">{$mode delphi}{$H+}</span>
+&#160;
+<span class="kw1">uses</span>
+  Classes<span class="sy1">,</span> SysUtils<span class="sy1">,</span> 
+  fpspreadsheet<span class="sy1">,</span> fpsallformats<span class="sy1">,</span> fpspreadsheet_pkg<span class="sy1">;</span>
+&#160;
+<span class="kw1">const</span> 
+  INPUT_FORMAT <span class="sy3">=</span> sfOpenDocument<span class="sy1">;</span>
+  OUTPUT_FORMAT <span class="sy3">=</span> sfExcel8<span class="sy1">;</span>
+&#160;
+<span class="kw1">var</span>
+  MyWorkbook<span class="sy1">:</span> TsWorkbook<span class="sy1">;</span>
+  MyDir<span class="sy1">:</span> <span class="kw4">string</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+  <span class="co1">// Initialization</span>
+  MyDir <span class="sy1">:</span><span class="sy3">=</span> <span class="kw3">ExtractFilePath</span><span class="br0">&#40;</span><span class="kw3">ParamStr</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  <span class="co1">// Convert the spreadsheet</span>
+  MyWorkbook <span class="sy1">:</span><span class="sy3">=</span> TsWorkbook<span class="sy1">.</span><span class="me1">Create</span><span class="sy1">;</span>
+  <span class="kw1">try</span>
+    MyWorkbook<span class="sy1">.</span><span class="me1">ReadFromFile</span><span class="br0">&#40;</span>MyDir <span class="sy3">+</span> <span class="st0">'test.ods'</span><span class="sy1">,</span> INPUT_FORMAT<span class="br0">&#41;</span><span class="sy1">;</span>
+    MyWorkbook<span class="sy1">.</span><span class="me1">WriteToFile</span><span class="br0">&#40;</span>MyDir <span class="sy3">+</span> <span class="st0">'test.xls'</span><span class="sy1">,</span> OUTPUT_FORMAT<span class="br0">&#41;</span><span class="sy1">;</span>
+  <span class="kw1">finally</span>
+    MyWorkbook<span class="sy1">.</span><span class="me1">Free</span><span class="sy1">;</span>
+  <span class="kw1">end</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">.</span></pre></div></pre>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=19" title="Edit section: Using formatting options">edit</a>]</span> <span class="mw-headline" id="Using_formatting_options"> Using formatting options </span></h3>
+<p>The formatting is set independently from the text, as in the example below:
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">  <span class="co1">// Write a bold text</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">0</span><span class="sy1">,</span> <span class="st0">'First'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUsedFormatting</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">0</span><span class="sy1">,</span> <span class="br0">&#91;</span>uffBold<span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy1">;</span></pre></div></pre>
+<h4><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=20" title="Edit section: Setting the text orientation">edit</a>]</span> <span class="mw-headline" id="Setting_the_text_orientation">Setting the text orientation</span></h4>
+<p>There are three possible text rotations: trHorizontal, rt90DegreeClockwiseRotation and rt90DegreeCounterClockwiseRotation
+</p><p>They are relative to the standard text position.
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">  <span class="co1">// Write a bold text</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">0</span><span class="sy1">,</span> <span class="st0">'First'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyCell <span class="sy1">:</span><span class="sy3">=</span> MyWorksheet<span class="sy1">.</span><span class="me1">GetCell</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyCell<span class="sy2">^</span><span class="sy1">.</span><span class="me1">TextRotation</span> <span class="sy1">:</span><span class="sy3">=</span> rt90DegreeClockwiseRotation<span class="sy1">;</span>
+  MyCell<span class="sy2">^</span><span class="sy1">.</span><span class="me1">UsedFormattingFields</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="br0">&#91;</span>uffTextRotation<span class="br0">&#93;</span><span class="sy1">;</span></pre></div></pre>
+<h4><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=21" title="Edit section: Setting a Border">edit</a>]</span> <span class="mw-headline" id="Setting_a_Border">Setting a Border</span></h4>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">  <span class="co1">// Write a text with borders and background color</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">5</span><span class="sy1">,</span> <span class="nu0">9</span><span class="sy1">,</span> <span class="st0">'[N,W,E,S]'</span><span class="br0">&#41;</span><span class="sy1">;</span><span class="co1">// J6</span>
+  MyCell <span class="sy1">:</span><span class="sy3">=</span> MyWorksheet<span class="sy1">.</span><span class="me1">GetCell</span><span class="br0">&#40;</span><span class="nu0">5</span><span class="sy1">,</span> <span class="nu0">9</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyCell<span class="sy2">^</span><span class="sy1">.</span><span class="me1">Border</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="br0">&#91;</span>cbNorth<span class="sy1">,</span> cbWest<span class="sy1">,</span> cbEast<span class="sy1">,</span> cbSouth<span class="br0">&#93;</span><span class="sy1">;</span>
+  MyCell<span class="sy2">^</span><span class="sy1">.</span><span class="me1">UsedFormattingFields</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="br0">&#91;</span>uffBorder<span class="sy1">,</span> uffBold<span class="sy1">,</span> uffBackgroundColor<span class="br0">&#93;</span><span class="sy1">;</span></pre></div></pre>
+<h4><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=22" title="Edit section: Setting a Background Color">edit</a>]</span> <span class="mw-headline" id="Setting_a_Background_Color">Setting a Background Color</span></h4>
+<p>One can set one of 16 colors from a pallete to set to the background. The possible values are:
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">  <span class="coMULTI">{@@ Colors in FPSpreadsheet as given by a pallete to be compatible with Excel }</span>
+&#160;
+  TsColor <span class="sy3">=</span> <span class="br0">&#40;</span>
+    scBlack<span class="sy1">,</span>    <span class="co1">// 000000H</span>
+    scWhite<span class="sy1">,</span>    <span class="co1">// FFFFFFH</span>
+    scRed<span class="sy1">,</span>      <span class="co1">// FF0000H</span>
+    scGREEN<span class="sy1">,</span>    <span class="co1">// 00FF00H</span>
+    scBLUE<span class="sy1">,</span>     <span class="co1">// 0000FFH</span>
+    scYELLOW<span class="sy1">,</span>   <span class="co1">// FFFF00H</span>
+    scMAGENTA<span class="sy1">,</span>  <span class="co1">// FF00FFH</span>
+    scCYAN<span class="sy1">,</span>     <span class="co1">// 00FFFFH</span>
+    scDarkRed<span class="sy1">,</span>  <span class="co1">// 800000H</span>
+    scDarkGreen<span class="sy1">,</span><span class="co1">// 008000H</span>
+    scDarkBlue<span class="sy1">,</span> <span class="co1">// 000080H</span>
+    scOLIVE<span class="sy1">,</span>    <span class="co1">// 808000H</span>
+    scPURPLE<span class="sy1">,</span>   <span class="co1">// 800080H</span>
+    scTEAL<span class="sy1">,</span>     <span class="co1">// 008080H</span>
+    scSilver<span class="sy1">,</span>   <span class="co1">// C0C0C0H</span>
+    scGrey      <span class="co1">// 808080H</span>
+    <span class="co1">//</span>
+    scGrey10pct<span class="sy1">,</span><span class="co1">// E6E6E6H</span>
+    scGrey20pct <span class="co1">// CCCCCCH</span>
+  <span class="br0">&#41;</span><span class="sy1">;</span></pre></div></pre>
+<p>And an example:
+</p>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">  <span class="co1">// Write a text with background color</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">0</span><span class="sy1">,</span> <span class="st0">'Test'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyCell <span class="sy1">:</span><span class="sy3">=</span> MyWorksheet<span class="sy1">.</span><span class="me1">GetCell</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="sy1">,</span> <span class="nu0">0</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyCell<span class="sy2">^</span><span class="sy1">.</span><span class="me1">BackgroundColor</span> <span class="sy1">:</span><span class="sy3">=</span> scSilver<span class="sy1">;</span>
+  MyCell<span class="sy2">^</span><span class="sy1">.</span><span class="me1">UsedFormattingFields</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="br0">&#91;</span>uffBackgroundColor<span class="br0">&#93;</span><span class="sy1">;</span></pre></div></pre>
+<h4><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=23" title="Edit section: Combining Multiple Formattings">edit</a>]</span> <span class="mw-headline" id="Combining_Multiple_Formattings">Combining Multiple Formattings</span></h4>
+<pre dir="ltr" class="mw-geshi mw-content-ltr"><div class="delphi source-delphi"><pre class="de1">  <span class="co1">// Write a text with borders and background color</span>
+  MyWorksheet<span class="sy1">.</span><span class="me1">WriteUTF8Text</span><span class="br0">&#40;</span><span class="nu0">5</span><span class="sy1">,</span> <span class="nu0">9</span><span class="sy1">,</span> <span class="st0">'[N,W,E,S]'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyCell <span class="sy1">:</span><span class="sy3">=</span> MyWorksheet<span class="sy1">.</span><span class="me1">GetCell</span><span class="br0">&#40;</span><span class="nu0">5</span><span class="sy1">,</span> <span class="nu0">9</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  MyCell<span class="sy2">^</span><span class="sy1">.</span><span class="me1">Border</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="br0">&#91;</span>cbNorth<span class="sy1">,</span> cbWest<span class="sy1">,</span> cbEast<span class="sy1">,</span> cbSouth<span class="br0">&#93;</span><span class="sy1">;</span>
+  MyCell<span class="sy2">^</span><span class="sy1">.</span><span class="me1">UsedFormattingFields</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="br0">&#91;</span>uffBorder<span class="sy1">,</span> uffBold<span class="sy1">,</span> uffBackgroundColor<span class="br0">&#93;</span><span class="sy1">;</span></pre></div></pre>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=24" title="Edit section: Grid and Charting Controls with FPSpreadsheet">edit</a>]</span> <span class="mw-headline" id="Grid_and_Charting_Controls_with_FPSpreadsheet">Grid and Charting Controls with FPSpreadsheet</span></h3>
+<p>See <a href="/TsWorksheetChartSource" title="TsWorksheetChartSource">TsWorksheetChartSource</a>
+</p>
+<h2><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=25" title="Edit section: Download">edit</a>]</span> <span class="mw-headline" id="Download"> Download </span></h2>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=26" title="Edit section: Subversion">edit</a>]</span> <span class="mw-headline" id="Subversion"> Subversion </span></h3>
+<p>You can download FPSpreadsheet using the subversion software and the following command line:
+</p>
+<pre>
+svn co https://lazarus-ccr.svn.sourceforge.net/svnroot/lazarus-ccr/components/fpspreadsheet fpspreadsheet
+</pre>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=27" title="Edit section: Latest release">edit</a>]</span> <span class="mw-headline" id="Latest_release">Latest release</span></h3>
+<p>One can find the latest release in source forge:
+</p><p><a rel="nofollow" class="external free" href="https://sourceforge.net/projects/lazarus-ccr/files/FPSpreadsheet/">https://sourceforge.net/projects/lazarus-ccr/files/FPSpreadsheet/</a>
+</p>
+<h2><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=28" title="Edit section: Support and Bug Reporting">edit</a>]</span> <span class="mw-headline" id="Support_and_Bug_Reporting"> Support and Bug Reporting </span></h2>
+<p>The recommended place to discuss FPSpreadsheet and obtain support is asking in the Lazarus Forum: <a rel="nofollow" class="external free" href="http://www.lazarus.freepascal.org/index.php/board,42.0.html">http://www.lazarus.freepascal.org/index.php/board,42.0.html</a>
+</p><p>Bug reports should be sent to the Free Pascal Bug Tracker in the "Lazarus-CCR" section: <a rel="nofollow" class="external free" href="http://bugs.freepascal.org/">http://bugs.freepascal.org/</a>
+</p>
+<h2><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=29" title="Edit section: Current Progress">edit</a>]</span> <span class="mw-headline" id="Current_Progress"> Current Progress </span></h2>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=30" title="Edit section: Support by file format">edit</a>]</span> <span class="mw-headline" id="Support_by_file_format"> Support by file format </span></h3>
+<p>Progress by supported format:
+</p>
+<table class="wikitable">
+<tr>
+<th> Format </th>
+<th> Supports multiple sheets? </th>
+<th> Supports Unicode? </th>
+<th> Reader Progress </th>
+<th> Writer Progress </th>
+<th> Text </th>
+<th> Number </th>
+<th> String Formula </th>
+<th> RPN Formula </th>
+<th> Date/Time
+</th></tr>
+<tr>
+<td>CSV</td>
+<td>No</td>
+<td>Yes</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Excel 2.x</td>
+<td>No</td>
+<td>No**</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td>Not implemented</td>
+<td class="working">Working</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Excel 3.0</td>
+<td>No</td>
+<td>No**</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Excel 4.0</td>
+<td>No</td>
+<td>No**</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Excel 5.0 (Excel 5.0 and 95)</td>
+<td>Yes</td>
+<td>No**</td>
+<td class="working">Working*</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td>Not implemented</td>
+<td class="working">Working</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Excel 8.0 (Excel 97, 2000, XP and 2003)</td>
+<td>Yes</td>
+<td>Yes</td>
+<td class="working">Working*</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td>Not implemented</td>
+<td class="working">Working</td>
+<td class="partial">Read only and dates only
+</td></tr>
+<tr>
+<td>Microsoft OOXML</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Not implemented</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>OpenDocument</td>
+<td>Yes</td>
+<td>Yes</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr></table>
+<p>(*) Some cell could be returned blank due missing or non ready implemented number and text formats.<br />
+(**) In formats which don't support Unicode the data is stored by default as ISO 8859-1 (Latin 1). You can change the encoding in TsWorkbook.Encoding. Note that FPSpreadsheet offers UTF-8 read and write routines, but the data might be converted to ISO when reading or writing to the disk. Be careful that characters which don't fit selected encoding will be lost in those operations. The remarks here are only valid for formats which don't support Unicode.
+</p>
+<h3><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=31" title="Edit section: Progress of the formatting options">edit</a>]</span> <span class="mw-headline" id="Progress_of_the_formatting_options"> Progress of the formatting options </span></h3>
+<p>Some formatting options were added, but they aren't yet implemented for all formats:
+</p>
+<table class="wikitable">
+<tr>
+<th> Format </th>
+<th> Text rotation </th>
+<th> Bold </th>
+<th> Border </th>
+<th> Background Color </th>
+<th> Word-wrap </th>
+<th> Col&amp;Row size
+</th></tr>
+<tr>
+<td>CSV</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A
+</td></tr>
+<tr>
+<td>Excel 2.x</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Excel 3.0</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Excel 4.0</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Excel 5.0 (Excel 5.0 and 95)</td>
+<td>-</td>
+<td>-</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Excel 8.0 (Excel 97, 2000, XP and 2003)</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>Microsoft OOXML</td>
+<td>Not implemented</td>
+<td class="working">Working</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented</td>
+<td>Not implemented
+</td></tr>
+<tr>
+<td>OpenDocument</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td class="working">Working</td>
+<td>Not implemented
+</td></tr></table>
+<h2><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=32" title="Edit section: Changelog">edit</a>]</span> <span class="mw-headline" id="Changelog"> Changelog </span></h2>
+<p>Jan 2013
+</p>
+<ul><li>Version 1.1 released with all improvements up to revision 2621
+</li></ul>
+<p>Nov 2011
+</p>
+<ul><li> Released version 1.0, which includes OO XML generation support with bold formatting supported and also a lot of improvements from the last years
+</li></ul>
+<p>Jan 2009
+</p>
+<ul><li>Implemented a cross-platform support for OLE file. Now Excel 5.0 files can be created in any operating system.
+</li><li>Adds read support for Excel 2.1
+</li></ul>
+<p>Feb 2008
+</p>
+<ul><li>Initial commit to lazarus-ccr with write support for Excel 2.1, Excel 5.0 (Windows only) and experimental OOXML and OpenDocument
+</li></ul>
+<h2><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=33" title="Edit section: License">edit</a>]</span> <span class="mw-headline" id="License"> License </span></h2>
+<p>LGPL with static linking exception. This is the same license as is used in the Lazarus Component Library.
+</p>
+<h2><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=34" title="Edit section: See also">edit</a>]</span> <span class="mw-headline" id="See_also"> See also </span></h2>
+<ul><li> <a href="/Office_Automation" title="Office Automation">Office Automation</a>
+</li><li> <a href="/CsvDocument" title="CsvDocument">CsvDocument</a>
+</li></ul>
+<h2><span class="editsection">[<a href="/index.php?title=FPSpreadsheet&amp;action=edit&amp;section=35" title="Edit section: External Links">edit</a>]</span> <span class="mw-headline" id="External_Links"> External Links </span></h2>
+<ul><li> Microsoft OLE Document Format - <a rel="nofollow" class="external free" href="http://sc.openoffice.org/compdocfileformat.pdf">http://sc.openoffice.org/compdocfileformat.pdf</a>
+</li><li> Excel file format description - <a rel="nofollow" class="external free" href="http://sc.openoffice.org/excelfileformat.pdf">http://sc.openoffice.org/excelfileformat.pdf</a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 299/1000000
+Post-expand include size: 225/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key lazaruswiki:pcache:idhash:4164-0!*!0!!en!*!* and timestamp 20130428085107 -->
+</div><div class="printfooter">
+Retrieved from "<a href="http://wiki.lazarus.freepascal.org/index.php?title=FPSpreadsheet&amp;oldid=66037">http://wiki.lazarus.freepascal.org/index.php?title=FPSpreadsheet&amp;oldid=66037</a>"</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/Category:Components" title="Category:Components">Components</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="/FPSpreadsheet" title="View the content page [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="/index.php?title=Talk:FPSpreadsheet&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-edit"><a href="/index.php?title=FPSpreadsheet&amp;action=edit" title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></li>
+				<li id="ca-history"><a href="/index.php?title=FPSpreadsheet&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>
+				<li id="ca-move"><a href="/Special:MovePage/FPSpreadsheet" title="Move this page [m]" accesskey="m">Move</a></li>
+				<li id="ca-watch"><a href="/index.php?title=FPSpreadsheet&amp;action=watch&amp;token=f09e5548f19677bb709517ff3830d625%2B%5C" title="Add this page to your watchlist [w]" accesskey="w">Watch</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-userpage"><a href="/User:BigChimp" title="Your user page [.]" accesskey=".">BigChimp</a></li>
+				<li id="pt-mytalk"><a href="/User_talk:BigChimp" title="Your talk page [n]" accesskey="n">My talk</a></li>
+				<li id="pt-preferences"><a href="/Special:Preferences" title="Your preferences">My preferences</a></li>
+				<li id="pt-watchlist"><a href="/Special:Watchlist" title="A list of pages you are monitoring for changes [l]" accesskey="l">My watchlist</a></li>
+				<li id="pt-mycontris"><a href="/Special:Contributions/BigChimp" title="A list of your contributions [y]" accesskey="y">My contributions</a></li>
+				<li id="pt-logout"><a href="/index.php?title=Special:UserLogout&amp;returnto=FPSpreadsheet" title="Log out">Log out</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Visit the main page" style="background-image: url(/skins/pic/lazlogo.gif);" href="http://www.lazarus.freepascal.org/"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li>
+				<li id="n-documentation"><a href="/Lazarus_Documentation">Documentation</a></li>
+				<li id="n-FAQ"><a href="/Lazarus_Faq">FAQ</a></li>
+				<li id="n-downloads"><a href="/Components_and_Code_examples">Downloads</a></li>
+				<li id="n-glossary"><a href="/Glossary">Glossary</a></li>
+				<li id="n-index"><a href="/Special:AllPages">Index</a></li>
+				<li id="n-recentchanges"><a href="/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-randompage"><a href="/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+				<li id="n-help"><a href="/Help:Contents" title="The place to find out">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/index.php" id="searchform">
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input type="search" name="search" title="Search Lazarus wiki [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/Special:WhatLinksHere/FPSpreadsheet" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/Special:RecentChangesLinked/FPSpreadsheet" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+				<li id="t-upload"><a href="/Special:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+				<li id="t-specialpages"><a href="/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li><a href="/index.php?title=FPSpreadsheet&amp;printable=yes" rel="alternate">Printable version</a></li>
+				<li id="t-permalink"><a href="/index.php?title=FPSpreadsheet&amp;oldid=66037" title="Permanent link to this revision of the page">Permanent link</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-copyrightico">
+		<a href="http://sourceforge.net"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=92177&amp;type=1" alt="" width="88" height="31" /></a>
+	</div>
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 20 February 2013, at 07:40.</li>
+		<li id="viewcount">This page has been accessed 19,531 times.</li>
+		<li id="copyright">Content is available under <a class="external" href="http://sourceforge.net"></a>.</li>
+		<li id="privacy"><a href="/Lazarus_wiki:Privacy_policy" title="Lazarus wiki:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="/Lazarus_wiki:About" title="Lazarus wiki:About">About Lazarus wiki</a></li>
+		<li id="disclaimer"><a href="/Lazarus_wiki:General_disclaimer" title="Lazarus wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "mediawiki.action.watch.ajax"]);
+}
+</script>
+<script src="/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;*"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":"1","cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":"1","hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":"500","rememberpassword":"1","rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":"1","watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,
+	"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"nickname":"","timecorrection":"Offset|0","watchlisttoken":"43502e38929c365b28d802a512317a8d24641365"});;mw.user.tokens.set({"editToken":"aa404854bc4beef5db0647ab3ad125d0+\\","watchToken":"43ddef8f448cac9ea78cd462ee965829+\\"});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: lazaruswiki:resourceloader:filter:minify-js:4:1decdd5a6812c81843831a5c703f9b19 */
+}
+</script><!-- Served in 0.579 secs. --></body></html>

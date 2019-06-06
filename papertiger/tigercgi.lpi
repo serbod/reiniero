@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <Runnable Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="tigercgi"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="2">
+      <Item1 Name="Default" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+          </CodeGeneration>
+          <Other>
+            <CustomOptions Value="-dDEBUG -dCGI"/>
+            <ExecuteBefore>
+              <Command Value="hgversion$(ExeExt)"/>
+              <CompileReasons Run="False"/>
+            </ExecuteBefore>
+          </Other>
+        </CompilerOptions>
+      </Item2>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="WebLaz"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="10">
+      <Unit0>
+        <Filename Value="tigercgi.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="tigercgimain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebobsolete"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="tigercgimain"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="tigerservercore.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="tigerservercore"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="tigerdb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="tigerdb"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="scan.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="scan"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="ocr.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ocr"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="tigercgi_image.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebimage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="tigercgi_image"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="tigercgi_document.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebdocument"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="tigercgi_document"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="tigercgi_server.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPWebserver"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="tigercgi_server"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="imagecleaner.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="imagecleaner"/>
+      </Unit9>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Optimizations>
+        <OptimizationLevel Value="2"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+    </Linking>
+    <Other>
+      <CustomOptions Value="-dCGI"/>
+      <ExecuteBefore>
+        <Command Value="hgversion$(ExeExt)"/>
+        <CompileReasons Run="False"/>
+      </ExecuteBefore>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,133 @@
+; testdbwriter.ini
+; Database output selection for the testdbwriter fpcunit listener
+; 
+; Specify the details for the connection to the database server or embedded database
+; that has the database where your fpcunit test results need to be stored.
+
+; This file contains several sections, one for each database type. 
+
+[Database]
+; Select which profile you want to use:
+profile=firebirdembedded
+
+
+; The following sections contain the profiles you can use
+; Please feel free to add/modify these:
+
+; Interbase or Firebird database:
+[firebird]
+; Specify which TSQLConnection descendant you want to use - i.e. what database
+; type you are using (use the spelling that the tsqlconnection uses)
+type=firebird
+
+; The name of the database:
+name=/opt/firebird/data/dbreporter.fdb
+
+; Default username/password for Interbase/Firebird
+; is sysdba/masterkey. Change to your situation.
+user=sysdba
+password=masterkey
+
+; hostname of the database server (or empty for embedded):
+hostname=localhost
+
+charset=UTF8
+
+; Firebird embedded
+; Same as Firebird, except we leave the host name blank
+; and specify a db without path.
+; Make sure your Firebird embedded library files (.dll/.so/.dylib)
+; are installed; e.g. on Windows, you can put them in this
+; directory.
+[firebirdembedded]
+type=firebird
+name=dbreporter.fdb
+user=sysdba
+password=masterkey
+hostname=
+charset=UTF8
+
+; MS SQL Server database:
+[mssql]
+type=mssql
+name=dbreporter
+user=sa
+password=
+hostname=127.0.0.1
+
+; MySQL 4.0 database:
+[mysql40]
+type=mysql40
+name=dbreporter
+user=root
+password=
+hostname=127.0.0.1
+
+; MySQL 4.1 database:
+[mysql41]
+type=mysql41
+name=dbreporter
+user=root
+password=
+hostname=127.0.0.1
+
+; MySQL 5.0 database:
+[mysql50]
+type=mysql50
+name=dbreporter
+user=root
+password=
+hostname=127.0.0.1
+
+; MySQL 5.1 database:
+[mysql51]
+type=mysql51
+name=dbreporter
+user=root
+password=
+hostname=127.0.0.1
+
+; MySQL 5.5 database (available since FPC 2.6.1):
+[mysql55]
+type=mysql55
+name=dbreporter
+user=root
+password=
+hostname=127.0.0.1
+
+; Oracle database:
+[oracle]
+type=oracle
+name=xe
+user=system
+password=
+hostname=127.0.0.1
+
+; ODBC database:
+[odbc]
+type=odbc
+name=dbreporter
+user=root
+password=
+hostname=127.0.0.1
+
+; PostgreSQL database:
+[postgresql]
+type=postgresql
+name=dbreporter
+user=
+password=
+hostname=127.0.0.1
+
+; SQLite database:
+[sqlite]
+type=sqlite3
+name=dbreporter.db
+
+; Sybase database:
+[sybase]
+type=sybase
+name=dbreporter
+user=sa
+password=
+hostname=127.0.0.1

@@ -1,0 +1,26 @@
+[General]
+; for Windows, use e.g.
+; ImageDirectory=\\192.168.153.2\somedir\anotherdir
+; for Linux, use e.g. 
+; ImageDirectory=~/somedir
+ImageDirectory=/opt/papertiger/scanimages
+PDFDirectory=/opt/papertiger/pdfs
+; Langauge for text recognition. Use Tesseract's way of writing the languages
+;nld=Dutch
+;eng=English
+Language=eng
+
+
+[Sane]
+; Name of the scanner device according to sane
+; e.g. genesys:libusb:001:002
+; Specify network sane servers like:
+; net:192.168.0.1:genesys:libusb:001:002
+DeviceName=net:192.168.0.1:genesys:libusb:001:002
+
+[Database]
+DatabaseType=Firebird
+Host=192.168.0.1
+Database=tiger
+User=SYSDBA
+Password=masterkey

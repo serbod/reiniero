@@ -1,0 +1,6 @@
+syntax: glob
+fpcplurktest
+fpcplurktest.ini
+fpcplurktest.lps
+lib/*
+log.txt

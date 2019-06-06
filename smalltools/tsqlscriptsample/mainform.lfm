@@ -1,0 +1,125 @@
+object Form1: TForm1
+  Left = 245
+  Height = 551
+  Top = 121
+  Width = 645
+  Caption = 'TSQLScriptSample'
+  ClientHeight = 531
+  ClientWidth = 645
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.3'
+  object Panel1: TPanel
+    Left = 16
+    Height = 36
+    Top = 24
+    Width = 536
+    BorderStyle = bsSingle
+    ClientHeight = 32
+    ClientWidth = 532
+    TabOrder = 0
+    object UseTermCtl: TCheckBox
+      Left = 16
+      Height = 19
+      Hint = 'Enable if you use Firebird SET TERM in script'
+      Top = 8
+      Width = 67
+      Caption = 'UseTerm'
+      TabOrder = 0
+    end
+    object UseCommitCtl: TCheckBox
+      Left = 208
+      Height = 19
+      Hint = 'Enable if using explicit COMMIT in script'
+      Top = 8
+      Width = 83
+      Caption = 'UseCommit'
+      Checked = True
+      State = cbChecked
+      TabOrder = 1
+    end
+    object UseCommentCtl: TCheckBox
+      Left = 368
+      Height = 19
+      Hint = 'Pass on comments to server or strip them'
+      Top = 8
+      Width = 110
+      Caption = 'CommentsInSQL'
+      TabOrder = 2
+    end
+  end
+  object ScriptMemo: TMemo
+    Left = 16
+    Height = 256
+    Top = 112
+    Width = 632
+    ScrollBars = ssAutoBoth
+    TabOrder = 4
+  end
+  object CmdCopyDDL: TButton
+    Left = 16
+    Height = 25
+    Top = 72
+    Width = 184
+    Caption = 'Copy table creation script'
+    OnClick = CmdCopyDDLClick
+    TabOrder = 1
+  end
+  object CmdCopyDML: TButton
+    Left = 368
+    Height = 25
+    Top = 72
+    Width = 184
+    Caption = 'Copy sample data script'
+    OnClick = CmdCopyDMLClick
+    TabOrder = 2
+  end
+  object CmdRunScript: TButton
+    Left = 272
+    Height = 33
+    Top = 384
+    Width = 123
+    Caption = '&Run script'
+    OnClick = CmdRunScriptClick
+    TabOrder = 3
+  end
+  object ErrorMemo: TMemo
+    Left = 16
+    Height = 112
+    Hint = 'Errors encountered running the script are shown here'
+    Top = 424
+    Width = 632
+    ScrollBars = ssAutoBoth
+    TabOrder = 5
+  end
+  object MainMenu1: TMainMenu
+    left = 416
+    top = 376
+    object mnuFile: TMenuItem
+      Caption = '&File'
+      object mnuFileOpen: TMenuItem
+        Caption = '&Open...'
+        OnClick = mnuFileOpenClick
+      end
+      object mnuSaveAs: TMenuItem
+        Caption = '&Save as...'
+        OnClick = mnuSaveAsClick
+      end
+      object mnuFileQuit: TMenuItem
+        Caption = 'Quit'
+        OnClick = mnuFileQuitClick
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'SQL Files|*.sql|All Files|*.*'
+    left = 480
+    top = 376
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'SQL files (*.sql)|*.sql|All files (*.*)|*.*'
+    left = 544
+    top = 376
+  end
+end

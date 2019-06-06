@@ -1,0 +1,132 @@
+object Form1: TForm1
+  Left = 104
+  Height = 504
+  Top = 115
+  Width = 692
+  Caption = 'Banco - Import/export bank transactions'
+  ClientHeight = 504
+  ClientWidth = 692
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.0.12.0'
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 216
+    Hint = 'Imported transactions'
+    Top = 72
+    Width = 680
+    Color = clWindow
+    Columns = <>
+    DefaultDrawing = False
+    TabOrder = 3
+    OnDrawColumnCell = DBGrid1DrawColumnCell
+  end
+  object Memo1: TMemo
+    Left = 160
+    Height = 88
+    Hint = 'Debug messages'
+    Top = 400
+    Width = 526
+    Lines.Strings = (
+      ''
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 7
+    TabStop = False
+  end
+  object ExportButton: TButton
+    Left = 160
+    Height = 25
+    Hint = 'Export transactions with specified format into export directory'
+    Top = 344
+    Width = 75
+    Caption = 'Export'
+    OnClick = ExportButtonClick
+    TabOrder = 6
+  end
+  object ExportFormatChoice: TListBox
+    Left = 8
+    Height = 192
+    Hint = 'The file format for the exported data'
+    Top = 296
+    Width = 140
+    ItemHeight = 0
+    OnSelectionChange = ExportFormatChoiceSelectionChange
+    TabOrder = 4
+  end
+  object InputFile: TFileNameEdit
+    Left = 64
+    Height = 23
+    Hint = 'The input file that contains the script results'
+    Top = 8
+    Width = 419
+    DialogOptions = [ofFileMustExist]
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 16
+    Top = 8
+    Width = 51
+    Caption = 'Input file:'
+    ParentColor = False
+  end
+  object ImportButton: TButton
+    Left = 528
+    Height = 25
+    Hint = 'Import the selected file'
+    Top = 8
+    Width = 131
+    Caption = 'Import'
+    OnClick = ImportButtonClick
+    TabOrder = 1
+  end
+  object DeleteButton: TButton
+    Left = 560
+    Height = 25
+    Hint = 'Delete contents of grid; does not delete files'
+    Top = 48
+    Width = 126
+    Caption = 'Delete grid...'
+    OnClick = DeleteButtonClick
+    TabOrder = 2
+    TabStop = False
+  end
+  object ExportDirectory: TDirectoryEdit
+    Left = 160
+    Height = 23
+    Hint = 'Directory/folder where export file should be placed'
+    Top = 312
+    Width = 368
+    ShowHidden = False
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 5
+  end
+  object Label2: TLabel
+    Left = 160
+    Height = 16
+    Top = 296
+    Width = 84
+    Caption = 'Export directory'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 16
+    Top = 40
+    Width = 391
+    Caption = 'Supported formats: ABN-Amro txt, ING txt, Rabo new csv .txt, Sberbank txt'
+    ParentColor = False
+  end
+  object DataSource1: TDatasource
+    left = 648
+    top = 320
+  end
+end

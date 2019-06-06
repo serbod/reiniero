@@ -1,0 +1,66 @@
+inherited AboutForm: TAboutForm
+  Left = 229
+  Height = 233
+  Top = 269
+  Width = 251
+  Caption = 'About Hello World'
+  ClientHeight = 233
+  ClientWidth = 251
+  Position = poDesktopCenter
+  object Label1: TLabel[0]
+    Left = 24
+    Height = 13
+    Top = 24
+    Width = 71
+    Caption = 'Example plugin'
+    ParentColor = False
+  end
+  object Label2: TLabel[1]
+    Left = 24
+    Height = 13
+    Top = 48
+    Width = 195
+    Caption = 'Damjan Zobo Cvetko, zobo@users.sf.net'
+    ParentColor = False
+  end
+  object Button1: TButton[2]
+    Left = 80
+    Height = 25
+    Top = 176
+    Width = 75
+    Caption = 'Ok'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Label3: TLabel[3]
+    Left = 24
+    Height = 13
+    Top = 80
+    Width = 184
+    Caption = 'Lazarusification by ludob and BigChimp'
+    ParentColor = False
+  end
+  object Label4: TLabel[4]
+    Left = 24
+    Height = 13
+    Top = 104
+    Width = 166
+    Caption = 'http://www.lazarus.freepascal.org/'
+    Font.Color = clBlue
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label4Click
+    OnMouseEnter = Label4MouseEnter
+    OnMouseLeave = Label4MouseLeave
+  end
+  object Label5: TLabel[5]
+    Left = 24
+    Height = 13
+    Top = 128
+    Width = 85
+    Caption = 'Packaging by eny'
+    ParentColor = False
+  end
+end

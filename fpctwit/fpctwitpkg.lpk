@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <Name Value="fpctwitpkg"/>
+    <Type Value="RunTimeOnly"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <IncludeFiles Value="src;synapse;inc"/>
+        <OtherUnitFiles Value="src;synapse"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <CodeGeneration>
+        <Optimizations>
+          <OptimizationLevel Value="0"/>
+        </Optimizations>
+      </CodeGeneration>
+      <Linking>
+        <Debugging>
+          <DebugInfoType Value="dsDwarf2Set"/>
+        </Debugging>
+      </Linking>
+      <Other>
+        <WriteFPCLogo Value="False"/>
+      </Other>
+    </CompilerOptions>
+    <Files Count="4">
+      <Item1>
+        <Filename Value="src/oauth1.pas"/>
+        <UnitName Value="oauth1"/>
+      </Item1>
+      <Item2>
+        <Filename Value="src/oauth1synapse.pas"/>
+        <UnitName Value="oauth1synapse"/>
+      </Item2>
+      <Item3>
+        <Filename Value="Readme.txt"/>
+        <Type Value="Text"/>
+      </Item3>
+      <Item4>
+        <Filename Value="inc/oauth.inc"/>
+        <Type Value="Include"/>
+      </Item4>
+    </Files>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="FCL"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <IncludePath Value="$(PkgDir)/inc"/>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,127 @@
+CheckRide licenses
+==================
+Just wanted to make sure you understand and accept under what licenses the various CheckRide components are distributed.
+If you don't agree with those licenses, please don't use the product.
+The non-lawyer summary: you may use these programs, even commercially, but please don't sue anybody and you may have to distribute source code to stuff if you modify it.
+See below for details.
+
+1. Description
+==============
+The CheckRide package contains of some wrapper and helper programs (e.g. CheckRide, CheckRideHelper, CheckRideResourceZipper) that use the UltraVNC, and stunnel programs and associated libraries (DLLS) and configuration files.
+The wrapper and helper programs don't link (statically or dynamically) to these applications/DLLs, but execute them and use command-line parameters and configuration files to specify what to do.
+
+2. CheckRide, CheckRideHelper, CheckRideResourceZipper License
+==============================================================
+The CheckRide, CheckRideHelper and CheckRideResourceZipper source code/programs are released as freeware under the MIT license: all use permitted but no liability accepted:
+
+Copyright (C) 2011 by Reinier Olislagers
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+3. UltraVNC license
+================================
+UltraVNC 1.0.9.6.1 from www.uvnc.com, GPL v3 license. 
+see
+http://www.uvnc.com/downloads/ultravnc/95-downlaod-10961.html
+
+Source is provided via the CheckRide source code archive:
+https://bitbucket.org/reiniero/checkride/src
+also at
+http://www.uvnc.com/component/jdownloads/summary/6/2.html
+
+Files used: 
+sas.dll
+schook.dll
+ultravnc.ini
+vnchooks.dll
+vncviewer.exe
+winvnc.exe
+
+Taken from the UltraVNC 1.0.9.6.1 download link:
+http://www.uvnc.com/downloads/ultravnc/95-downlaod-10961.html
+License
+
+GNU GENERAL PUBLIC LICENSE (GPL)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+http://www.gnu.org/licenses
+
+4. Stunnel license
+==================
+Stunnel 4.44 files from 
+http://www.stunnel.org/
+GPL license; includes permission to use with OpenSSL libraries.
+Source and binaries (including OpenSSL libraries) can be downloaded from
+http://www.stunnel.org/?page=downloads
+
+Source is provided via the CheckRide source code archive:
+https://bitbucket.org/reiniero/checkride/src
+also at
+ftp://ftp.stunnel.org/stunnel/stunnel-4.44.tar.gz
+
+Files used: 
+libeay32.dll
+ssleay32.dll
+stunnel.exe
+stunnel.ini
+stunnel.pem
+zlib1.dll
+
+Below extracted from COPYING in the source archive:
+stunnel license (see COPYRIGHT.GPL for detailed GPL conditions)
+
+Copyright (C) 1998-2011 Michal Trojnara
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, see <http://www.gnu.org/licenses>.
+
+Linking stunnel statically or dynamically with other modules is making
+a combined work based on stunnel. Thus, the terms and conditions of the
+GNU General Public License cover the whole combination.
+
+In addition, as a special exception, the copyright holder of stunnel gives you
+permission to combine stunnel with free software programs or libraries that
+are released under the GNU LGPL and with code included in the standard release
+of OpenSSL under the OpenSSL License (or modified versions of such code, with
+unchanged license). You may copy and distribute such a system following the
+terms of the GNU GPL for stunnel and the licenses of the other code concerned.
+
+Note that people who make modified versions of stunnel are not obligated to
+grant this special exception for their modified versions; it is their choice
+whether to do so. The GNU General Public License gives permission to release
+a modified version without this exception; this exception also makes it
+possible to release a modified version which carries forward this exception.

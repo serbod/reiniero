@@ -1,0 +1,5 @@
+libssh2.dll
+ssleay32.dll
+libeay32.dll
+Got it via 
+http://alxdm.dyndns-at-work.com:808/files/windll_libssh2.zip

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="NotepadPPPlugin"/>
+    <Author Value="Original Delphi plugin authors (Damjan Zobo Cvetko), Reinier Olislagers, Ludo Brands, eny, Irvine"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="obj\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Other>
+        <CompilerMessages>
+          <MsgFileName Value=""/>
+        </CompilerMessages>
+        <CustomOptions Value="-dNPPUNICODE"/>
+        <CompilerPath Value="$(CompPath)"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Provides a way to write plugins for the Notepad++ text editor"/>
+    <License Value="GPL"/>
+    <Version Release="1"/>
+    <Files Count="8">
+      <Item1>
+        <Filename Value="NppDockingForms.pas"/>
+        <UnitName Value="NppDockingForms"/>
+      </Item1>
+      <Item2>
+        <Filename Value="NppDockingForms.lfm"/>
+        <Type Value="LFM"/>
+      </Item2>
+      <Item3>
+        <Filename Value="NppForms.pas"/>
+        <UnitName Value="NppForms"/>
+      </Item3>
+      <Item4>
+        <Filename Value="NppForms.lfm"/>
+        <Type Value="LFM"/>
+      </Item4>
+      <Item5>
+        <Filename Value="nppplugin.pas"/>
+        <UnitName Value="nppplugin"/>
+      </Item5>
+      <Item6>
+        <Filename Value="NppPluginExport.inc"/>
+        <Type Value="Include"/>
+      </Item6>
+      <Item7>
+        <Filename Value="npptypes.pas"/>
+        <UnitName Value="npptypes"/>
+      </Item7>
+      <Item8>
+        <Filename Value="SciSupport.pas"/>
+        <UnitName Value="scisupport"/>
+      </Item8>
+    </Files>
+    <Type Value="RunTimeOnly"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

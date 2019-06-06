@@ -1,0 +1,106 @@
+object Form1: TForm1
+  Left = 213
+  Height = 656
+  Top = 93
+  Width = 855
+  Caption = 'fpctwitGUI'
+  ClientHeight = 636
+  ClientWidth = 855
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyPress = FormKeyPress
+  LCLVersion = '1.1'
+  object TweetEdit: TEdit
+    Left = 8
+    Height = 23
+    Top = 40
+    Width = 536
+    TabOrder = 1
+  end
+  object TweetButton: TButton
+    Left = 560
+    Height = 25
+    Top = 40
+    Width = 104
+    Caption = 'Tweet'
+    OnClick = TweetButtonClick
+    TabOrder = 2
+  end
+  object PrivateBox: TToggleBox
+    Left = 256
+    Height = 23
+    Top = 80
+    Width = 106
+    Caption = 'Public Timeline'
+    OnChange = PrivateBoxChange
+    TabOrder = 3
+  end
+  object TweetGrid: TStringGrid
+    Left = 8
+    Height = 512
+    Top = 120
+    Width = 840
+    ColCount = 4
+    Columns = <    
+      item
+        Title.Caption = 'User'
+        Width = 140
+      end    
+      item
+        Alignment = taCenter
+        Title.Caption = 'Date'
+        Width = 120
+      end    
+      item
+        Title.Caption = 'Message'
+        Width = 400
+      end>
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goSmoothScroll]
+    TabOrder = 4
+  end
+  object UserLabel: TLabel
+    Left = 9
+    Height = 16
+    Top = 9
+    Width = 107
+    Caption = 'User: not connected'
+    ParentColor = False
+  end
+  object ConnectButton: TButton
+    Left = 272
+    Height = 25
+    Top = 0
+    Width = 75
+    Caption = 'Connect'
+    OnClick = ConnectButtonClick
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    left = 24
+    top = 72
+    object FileMenu: TMenuItem
+      Caption = '&File'
+      object RegisterMenu: TMenuItem
+        Caption = 'Register/Setup...'
+        OnClick = RegisterMenuClick
+      end
+      object ConnectMenu: TMenuItem
+        Caption = 'Connect'
+        OnClick = ConnectMenuClick
+      end
+      object QuitMenu: TMenuItem
+        Caption = 'Quit'
+        OnClick = QuitMenuClick
+      end
+    end
+    object HelpMenu: TMenuItem
+      Caption = '&Help'
+      object AboutMenu: TMenuItem
+        Caption = '&About'
+        OnClick = AboutMenuClick
+      end
+    end
+  end
+end

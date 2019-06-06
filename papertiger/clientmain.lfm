@@ -1,0 +1,146 @@
+object Form1: TForm1
+  Left = 315
+  Height = 481
+  Top = 155
+  Width = 665
+  Caption = 'PaperTiger'
+  ClientHeight = 462
+  ClientWidth = 665
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.3'
+  object DocumentsGrid: TStringGrid
+    Left = 11
+    Height = 353
+    Top = 15
+    Width = 349
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+      end    
+      item
+        Title.Caption = 'Name'
+      end    
+      item
+        Title.Caption = 'PDFPath'
+      end    
+      item
+        Title.Caption = 'ScanDate'
+      end    
+      item
+        Title.Caption = 'Hash'
+      end>
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goSmoothScroll]
+    RowCount = 1
+    TabOrder = 0
+    OnDblClick = DocumentsGridDblClick
+  end
+  object RefreshDocumentsButton: TButton
+    Left = 285
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Refresh'
+    OnClick = RefreshDocumentsButtonClick
+    TabOrder = 1
+  end
+  object ScanButton: TButton
+    Left = 384
+    Height = 25
+    Top = 24
+    Width = 99
+    Caption = 'Scan'
+    OnClick = ScanButtonClick
+    TabOrder = 2
+  end
+  object ShowImageButton: TButton
+    Left = 384
+    Height = 25
+    Top = 80
+    Width = 99
+    Caption = 'Show image'
+    OnClick = ShowImageButtonClick
+    TabOrder = 3
+  end
+  object ShowPDFButton: TButton
+    Left = 384
+    Height = 25
+    Top = 120
+    Width = 99
+    Caption = 'Show PDF'
+    OnClick = ShowPDFButtonClick
+    TabOrder = 4
+  end
+  object NumberPagesControl: TEdit
+    Left = 496
+    Height = 21
+    Top = 24
+    Width = 40
+    TabOrder = 5
+    Text = '1'
+  end
+  object Label1: TLabel
+    Left = 552
+    Height = 13
+    Top = 24
+    Width = 29
+    Caption = 'pages'
+    ParentColor = False
+  end
+  object UploadImageButton: TButton
+    Left = 384
+    Height = 25
+    Top = 184
+    Width = 144
+    Caption = 'Upload image...'
+    OnClick = UploadImageButtonClick
+    TabOrder = 6
+  end
+  object DeleteButton: TButton
+    Left = 384
+    Height = 25
+    Top = 264
+    Width = 99
+    Caption = 'Delete...'
+    OnClick = DeleteButtonClick
+    TabOrder = 8
+  end
+  object AddImageButton: TButton
+    Left = 384
+    Height = 25
+    Top = 216
+    Width = 144
+    Caption = 'Add image to document...'
+    OnClick = AddImageButtonClick
+    TabOrder = 7
+  end
+  object MainMenu1: TMainMenu
+    left = 48
+    top = 416
+    object mnuFile: TMenuItem
+      Caption = 'File'
+      object mnuRefresh: TMenuItem
+        Caption = 'Refresh'
+        Hint = 'Connects to server and refreshes documents list'
+        OnClick = mnuRefreshClick
+      end
+      object mnuQuit: TMenuItem
+        Caption = 'Quit'
+        OnClick = mnuQuitClick
+      end
+    end
+    object mnuHelp: TMenuItem
+      Caption = 'Help'
+      object mnuAbout: TMenuItem
+        Caption = 'About'
+        OnClick = mnuAboutClick
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    left = 120
+    top = 416
+  end
+end

@@ -1,0 +1,7 @@
+[General]
+; The base URL of the tiger server cgi program:
+; adapt according to 
+; 1. IP address/host name
+; 2. cgi directory
+; 3. cgi executable name
+CGIURL=http://127.0.0.1/cgi-bin/tigercgi/
